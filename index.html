@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的課後練習</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #f4f5f7;
+        color: #222;
+        font-family: Arial, "Microsoft JhengHei", sans-serif;
+        line-height: 1.6;
+      }
+
+      .page {
+        width: min(900px, 100%);
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      header {
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      .subtitle {
+        margin: 8px 0 0;
+        color: #666;
+        font-size: 18px;
+      }
+
+      section {
+        margin-top: 28px;
+      }
+
+      h2 {
+        margin: 0 0 16px;
+        font-size: 24px;
+      }
+
+      .link-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+      }
+
+      .card-link {
+        display: block;
+        padding: 18px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        color: #222;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .card-link:hover {
+        border-color: #333;
+        background-color: #fafafa;
+      }
+
+      .empty-text {
+        margin: 0;
+        padding: 18px;
+        border: 1px dashed #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        color: #666;
+      }
+
+      @media (max-width: 600px) {
+        .page {
+          padding: 28px 16px;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <header>
+        <h1>我的課後練習</h1>
+        <p class="subtitle">HTML / CSS 學習紀錄</p>
+      </header>
+
+      <section>
+        <h2>每日作業</h2>
+        <div class="link-list">
+          <a class="card-link" href="homework/0909/">0909</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>專案</h2>
+        <p class="empty-text">目前還沒有專案。</p>
+      </section>
+    </main>
+  </body>
+</html>

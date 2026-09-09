@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>0909作業</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 10px;
+        background-color: white;
+        font-family: "Microsoft JhengHei", "Noto Sans TC", Arial, sans-serif;
+      }
+
+      h1 {
+        width: 525px;
+        margin: 0 0 5px 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+      }
+
+      table {
+        width: 525px;
+        border-collapse: collapse;
+        table-layout: fixed;
+        border: 3px solid #111;
+      }
+
+      /* 四欄寬度 */
+      col:nth-child(1) {
+        width: 36%;
+      }
+
+      col:nth-child(2) {
+        width: 24%;
+      }
+
+      col:nth-child(3) {
+        width: 20%;
+      }
+
+      col:nth-child(4) {
+        width: 20%;
+      }
+
+      th,
+      td {
+        border: 2px solid #111;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      th {
+        height: 69px;
+        background-color: #222;
+        color: white;
+        font-size: 38px;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      td {
+        height: 69px;
+        background-color: #f7dca5;
+        color: black;
+        font-size: 36px;
+        white-space: nowrap;
+      }
+
+      .drink-title {
+        background-color: #222;
+        color: white;
+        font-size: 38px;
+        font-weight: bold;
+      }
+
+      .drink-head {
+        height: 66px;
+        font-size: 34px;
+      }
+
+      .drink-price {
+        height: 66px;
+        font-size: 34px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>來來小吃店</h1>
+
+    <table>
+      <colgroup>
+        <col />
+        <col />
+        <col />
+        <col />
+      </colgroup>
+
+      <tr>
+        <th>品項</th>
+        <th>單價</th>
+        <th>乾</th>
+        <th>湯</th>
+      </tr>
+
+      <tr>
+        <td>陽春麵</td>
+        <td>50元</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>餛飩麵</td>
+        <td>65元</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>麻醬麵</td>
+        <td>55元</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>牛肉麵</td>
+        <td>120元</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th>品項</th>
+        <th>小碗</th>
+        <th>大碗</th>
+        <th>數量</th>
+      </tr>
+
+      <tr>
+        <td>滷肉飯</td>
+        <td>35元</td>
+        <td>50元</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>雞肉飯</td>
+        <td>40元</td>
+        <td>55元</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>排骨飯</td>
+        <td colspan="2">90元</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th>品項</th>
+        <th>單價</th>
+        <th colspan="2">數量</th>
+      </tr>
+
+      <tr>
+        <td>貢丸湯</td>
+        <td>35元</td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <td>魚丸湯</td>
+        <td>35元</td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <td>餛飩湯</td>
+        <td>45元</td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <th>品項</th>
+        <th>單價</th>
+        <th colspan="2">數量</th>
+      </tr>
+
+      <tr>
+        <td>燙青菜</td>
+        <td>40元</td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <td>皮蛋豆腐</td>
+        <td>40元</td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <td>滷蛋</td>
+        <td>15元</td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <th rowspan="2" class="drink-title">飲料</th>
+        <th class="drink-head">紅茶</th>
+        <th class="drink-head">奶茶</th>
+        <th class="drink-head">豆漿</th>
+      </tr>
+
+      <tr>
+        <td class="drink-price">25元</td>
+        <td class="drink-price">35元</td>
+        <td class="drink-price">30元</td>
+      </tr>
+    </table>
+  </body>
+</html>
