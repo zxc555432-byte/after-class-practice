@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0918 練習五倍靈修報名表</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <a class="back-home" href="../../index.html">返回首頁</a>
+
+      <section class="hero" aria-labelledby="pageTitle">
+        <p class="eyebrow">Front-end Form Practice</p>
+        <h1 id="pageTitle">五倍迷因靈修報名表</h1>
+        <p class="hero-text">
+          以主之名，練習 HTML 表單、CSS 排版與 JavaScript
+          互動：斷開鎖鏈、填好欄位、接受五倍表單驗證。
+        </p>
+      </section>
+
+      <form class="form-card" id="blessingForm" novalidate>
+        <input type="hidden" name="campaign" value="five-times-meme" />
+
+        <fieldset class="form-section">
+          <legend>基本資料</legend>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">姓名</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="例如：橘貓阿肥"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="miao@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="phone">手機</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="0912-345-678"
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="field">
+              <label for="password">通關密語</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="輸入你的靈的密碼"
+                minlength="6"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>聚會設定</legend>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="blessingLevel">五倍指數</label>
+              <div class="range-row">
+                <input
+                  type="range"
+                  id="blessingLevel"
+                  name="blessingLevel"
+                  min="1"
+                  max="5"
+                  value="5"
+                />
+                <output id="blessingOutput" for="blessingLevel">5 倍</output>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="teamSize">同行人數</label>
+              <input
+                type="number"
+                id="teamSize"
+                name="teamSize"
+                min="1"
+                max="20"
+                value="1"
+              />
+            </div>
+
+            <div class="field">
+              <label for="eventDate">報名日期</label>
+              <input type="date" id="eventDate" name="eventDate" />
+            </div>
+
+            <div class="field">
+              <label for="eventTime">禱告時間</label>
+              <input type="time" id="eventTime" name="eventTime" />
+            </div>
+
+            <div class="field">
+              <label for="eventDateTime">精準斷開時刻</label>
+              <input
+                type="datetime-local"
+                id="eventDateTime"
+                name="eventDateTime"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>單選、多選與檔案</legend>
+
+          <div class="choice-layout">
+            <div class="choice-group">
+              <p class="choice-title">單選：今日最需要斷開什麼？</p>
+              <label class="choice-item">
+                <input
+                  type="radio"
+                  name="breakTarget"
+                  value="badMood"
+                  required
+                />
+                壞心情
+              </label>
+              <label class="choice-item">
+                <input type="radio" name="breakTarget" value="lazyMode" />
+                懶惰模式
+              </label>
+              <label class="choice-item">
+                <input type="radio" name="breakTarget" value="bugChain" />
+                Bug 的鎖鏈
+              </label>
+            </div>
+
+            <div class="choice-group">
+              <p class="choice-title">多選：想領受哪些五倍配備？</p>
+              <label class="choice-item">
+                <input type="checkbox" name="equipments" value="courage" />
+                五倍勇氣
+              </label>
+              <label class="choice-item">
+                <input type="checkbox" name="equipments" value="focus" />
+                五倍專注
+              </label>
+              <label class="choice-item">
+                <input type="checkbox" name="equipments" value="debugPower" />
+                五倍 Debug 能力
+              </label>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="memeFile">上傳迷因見證圖</label>
+              <input
+                type="file"
+                id="memeFile"
+                name="memeFile"
+                accept="image/*"
+              />
+            </div>
+
+            <div class="field">
+              <label for="memeMode">下拉選單</label>
+              <select id="memeMode" name="memeMode" required>
+                <option value="">請選擇靈修模式</option>
+                <option value="gentle">溫柔提醒</option>
+                <option value="powerful">大聲斷開</option>
+                <option value="fiveTimes">直接五倍</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>文字區塊與按鈕</legend>
+
+          <div class="field">
+            <label for="message">今日見證</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="請輸入：我今天要斷開什麼，並且領受五倍什麼。"
+              required
+            ></textarea>
+          </div>
+
+          <label class="choice-item agree-row">
+            <input type="checkbox" id="agree" name="agree" required />
+            我同意這是一份前端練習表單，所有祝福請自行保管。
+          </label>
+
+          <div class="button-row">
+            <button type="submit">送出表單</button>
+            <button type="reset" class="secondary-button">重新填寫</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <div
+      class="modal"
+      id="successModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-card">
+        <p class="modal-eyebrow">表單送出成功</p>
+        <h2 id="modalTitle">
+          恭喜你 <span id="modalName">同學</span> 已成功得到五倍祝福
+        </h2>
+        <p class="modal-text">開始你的五倍學院訓練</p>
+        <ul class="training-list">
+          <li>第一課：斷開拖延，準時完成作業。</li>
+          <li>第二課：領受專注，表單欄位不漏填。</li>
+          <li>第三課：五倍 Debug，錯誤訊息看得懂。</li>
+        </ul>
+        <p class="random-line" id="randomLine">準備領受今日訓練金句。</p>
+        <div class="modal-actions">
+          <button type="button" id="randomButton">隨機五倍一句</button>
+          <button type="button" class="secondary-button" id="closeModalButton">
+            開始訓練
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

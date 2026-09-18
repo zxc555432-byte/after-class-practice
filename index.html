@@ -19,74 +19,125 @@
       }
 
       .page {
-        width: min(900px, 100%);
+        width: min(100% - 32px, 980px);
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 44px 0;
       }
 
       header {
         margin-bottom: 32px;
-        text-align: center;
+        padding: 28px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
       }
 
       h1 {
-        margin: 0;
-        font-size: 36px;
-      }
-
-      .subtitle {
-        margin: 8px 0 0;
-        color: #666;
-        font-size: 18px;
-      }
-
-      section {
-        margin-top: 28px;
+        margin-bottom: 8px;
+        font-size: 38px;
       }
 
       h2 {
-        margin: 0 0 16px;
-        font-size: 24px;
+        margin-bottom: 16px;
+        font-size: 26px;
       }
 
-      .link-list {
+      h3 {
+        margin-bottom: 8px;
+        font-size: 20px;
+      }
+
+      .subtitle {
+        margin-bottom: 0;
+        color: #666666;
+        font-size: 18px;
+      }
+
+      .section {
+        margin-top: 28px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 14px;
+      }
+
+      .section-note {
+        margin: 0;
+        color: #666666;
+      }
+
+      .card-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        min-height: 150px;
+        padding: 18px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
       }
 
       .card-link {
         display: block;
-        padding: 18px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #fff;
-        color: #222;
-        text-align: center;
+        color: #222222;
         text-decoration: none;
       }
 
       .card-link:hover {
-        border-color: #333;
+        border-color: #333333;
         background-color: #fafafa;
       }
 
-      .empty-text {
-        margin: 0;
-        padding: 18px;
-        border: 1px dashed #ccc;
-        border-radius: 8px;
-        background-color: #fff;
-        color: #666;
+      .tag {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 4px 10px;
+        color: #555555;
+        font-size: 14px;
+        background-color: #f0f0f0;
+        border-radius: 999px;
       }
 
-      @media (max-width: 600px) {
+      .card p {
+        margin-bottom: 0;
+        color: #666666;
+      }
+
+      .card.pending {
+        border-style: dashed;
+        color: #777777;
+      }
+
+      @media (max-width: 640px) {
         .page {
-          padding: 28px 16px;
+          width: min(100% - 24px, 980px);
+          padding: 28px 0;
+        }
+
+        header {
+          padding: 22px;
         }
 
         h1 {
-          font-size: 30px;
+          font-size: 32px;
+        }
+
+        .section-head {
+          display: block;
         }
       }
     </style>
@@ -96,27 +147,52 @@
     <main class="page">
       <header>
         <h1>我的課後練習</h1>
+        <p class="subtitle">產業新尖兵前端開發實戰：每日作業、自主加練與小專案整理。</p>
       </header>
 
-      <section>
-        <h2>關於此站</h2>
-        <p>產業新尖兵計劃-前端開發實戰作業區</p>
-        <p>後續看心情再美化此頁</p>
-      </section>
+      <section class="section">
+        <div class="section-head">
+          <h2>每日作業</h2>
+          <p class="section-note">老師指定或課後要交的練習放這裡。</p>
+        </div>
 
-      <section>
-        <h2>每日作業</h2>
-        <div class="link-list">
-          <a class="card-link" href="homework/0909/">0909</a>
+        <div class="card-grid">
+          <a class="card card-link" href="homework/0909/">
+            <span class="tag">0909</span>
+            <h3>表格練習</h3>
+            <p>使用 table 做菜單排版，練習 HTML 表格結構與 CSS 基礎樣式。</p>
+          </a>
         </div>
       </section>
-      <section>
-        <h2>課堂筆記</h2>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>自主加練</h2>
+          <p class="section-note">自己加碼做的練習與實驗放這裡。</p>
+        </div>
+
+        <div class="card-grid">
+          <a class="card card-link" href="projects/0918-five-times-form/">
+            <span class="tag">0918</span>
+            <h3>五倍迷因表單</h3>
+            <p>練習 HTML 表單、CSS 排版、JavaScript 驗證、送出成功彈出框與隨機句。</p>
+          </a>
+        </div>
       </section>
 
-      <section>
-        <h2>專案</h2>
-        <p class="empty-text">目前還沒有專案。</p>
+      <section class="section">
+        <div class="section-head">
+          <h2>專案練習</h2>
+          <p class="section-note">之後比較完整的專題或工具會放在這裡。</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card pending">
+            <span class="tag">準備中</span>
+            <h3>專題位置先保留</h3>
+            <p>目前還沒有專案練習。之後有完整作品時，再新增連結到這個區域。</p>
+          </article>
+        </div>
       </section>
     </main>
   </body>
