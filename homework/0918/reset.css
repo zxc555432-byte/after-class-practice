@@ -1,0 +1,43 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+p,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+}
+
+button,
+select,
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
